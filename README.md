@@ -12,6 +12,8 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 <p align="center">
 <img src="figures/overview.png " width="650"> 
 </p>
+
 ## 2. Architecture
+In this implementation, we used a densely connected neural networks ([Huang et al./ 2017](http://openaccess.thecvf.com/content_cvpr_2017/html/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.html)) with $L=40$ and $k=12$.
 
 ## 3. Example
