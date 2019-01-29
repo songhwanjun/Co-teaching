@@ -10,7 +10,7 @@ def main():
     print("This code to train densnet(L=40, k=12) on cifar-10 using Default or Co-teaching.")
     print("You can easily train other datasets by modifying ""cifar10_reader.py"".")
     print("\nDescription -----------------------------------------------------------")
-    print("For Training, training_epoch = 100, batch = 128, initial_learning rate = 0.1 (decayed 50% and 75% of total number of epochs)")
+    print("For Training, training_epoch = 200, batch = 128, initial_learning rate = 0.1 (decayed 50% and 75% of total number of epochs)")
     print("               use momentum of 0.9, warm_up=15")
     print("You can easily change the value in main.py")
 
