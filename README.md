@@ -39,7 +39,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    Learning rate: 0.1 (divided 5 at the approximately 50% and approximately 75% of the total number of epochs)
    Dataset: CIFAR-10
    ```
-   These configurations can be easily modified at main.py:
+   - These configurations can be easily modified at main.py:
    ```python
    // gradient optimizer type
    optimizer = 'momentum'
@@ -61,7 +61,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    elif method_name == "Coteaching":
        coteaching(gpu_id, input_reader, total_epochs, batch_size, lr_boundaries, lr_values, optimizer, noise_rate, log_dir=log_dir)
    ```
-   Data augmentation and distortion are not applied.
+   - Data augmentation and distortion are not applied.
    
 - Running commend
    ```python
