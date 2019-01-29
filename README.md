@@ -100,6 +100,8 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    done
    ```
 - Running result
-  
+<p align="center">
+<img src="figures/tutorial_2.png " width="650"> 
+</p>
 
  
