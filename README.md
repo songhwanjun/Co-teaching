@@ -70,9 +70,9 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
     python main.py gpu_id method_name noise_rate log_dir
    ```
    This commend includes:
-   *i)* CIFAR-10 automatical download, 
-   *ii)* noise injection, 
-   *iii)* neural network training.
+   *(i)* CIFAR-10 automatical download, 
+   *(ii)* noise injection, and 
+   *(iii)* neural network training.
 
 ## 5. Tutorial 1: Comparison of learning curves at the noise rate of 40%.
 - We set *tau* to 0.4
