@@ -73,7 +73,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 
 ## 5. Tutorial 1: Comparison of learning curves at the noise rate of 40%.
 - We set *tau* to 0.4
-   ```python
+   ```shell
    #!/bin/sh
    main.py 0 Default 0.4 tutorial_1/Defulat
    main.py 0 Co-teaching 0.4 tutorial_1/Co-teaching
@@ -85,7 +85,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 ## 6. Tutorial 2: Comparison of the best test error with varying noise rates.
 - We used *tau* in {0.0, 0.1, 0.2, 0.3, 0.4} //from *light* noise to *heavy* noise
 - Running script
-   ```python
+   ```shell
    #!/bin/sh
    for i in 0.0 0.1 0.2 0.3 0.4
    do
