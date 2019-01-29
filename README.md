@@ -1,5 +1,6 @@
 # Co-teaching - Robust training of deep neural networks with extremely noisy labels
 Unofficial tensorflow implementation of the CIFAR-10 learned by [Co-teaching](http://papers.nips.cc/paper/8072-co-teaching-robust-training-of-deep-neural-networks-with-extremely-noisy-labels). 
+
 Official torch implementation: [https://github.com/bhanML/Co-teaching](https://github.com/bhanML/Co-teaching)
 
 > __Publication__ </br>
