@@ -16,5 +16,5 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 ## 2. Noise Injection and Network Architecture
 - To inject noisy labels on CIFAR-10 dataset, the true label *i* was flipped to the randomly chosen label *j* with a probability *tau*. That is, *tau* determines the degree of noiseness on dataset.
 - A densely connected neural networks (L=40, k=12)([Huang et al./ 2017](http://openaccess.thecvf.com/content_cvpr_2017/html/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.html)) was used to train the noisy CIFAR-10.
-
+- For the performance comparison, we compared the test loss of *Co-teaching* with that of *Default*. *Defualt* trained the noisy CIFAR-10 without any processing for noisy labels.
 ## 3. Example
