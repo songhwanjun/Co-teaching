@@ -33,6 +33,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    ```
    
 - Algorithm configuration
+   
    Data augmentation and distortion are not applied, and training paramters are set to:
    ```
    Training epochs: 200
