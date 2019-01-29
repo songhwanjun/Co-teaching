@@ -43,21 +43,21 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    ```
    These configurations can be easily modified at main.py:
    ```python
-   // gradient optimizer type
+   # gradient optimizer type
    optimizer = 'momentum'
    
-   // total number of training epcohs
+   # total number of training epcohs
    total_epochs = 200
    
-   // batch size
+   # batch size
    batch_size = 128
    
-   // learning rates used for training, and the time to use each learning rate.
-   // e.g., lr=0.1 is used before 20,000 iterations, lr=0.02 is used before 30,000 iterations, lr=0.04 is used after 30,000 iterations
+   # learning rates used for training, and the time to use each learning rate.
+   # e.g., lr=0.1 is used before 20,000 iterations, lr=0.02 is used before 30,000 iterations, lr=0.04 is used after 30,000 iterations
    lr_values = [0.1, 0.02, 0.004]
    lr_boundaries = [40000, 60000]
    
-   // training algorithms
+   # training algorithms
    if method_name == "Default":
        default(gpu_id, input_reader, total_epochs, batch_size, lr_boundaries, lr_values, optimizer, noise_rate, log_dir=log_dir)
    elif method_name == "Coteaching":
