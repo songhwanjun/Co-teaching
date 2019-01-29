@@ -25,15 +25,33 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 
 ## 4. How to Run
 - Algorithm parameters
-   ```
+   ```python
     -gpu_id: gpu number which you want to use.
     -method_name: method in {Default, Co-teaching}.
     -noise_rate: the rate which you want to corrupt.
     -log_dir: log directory to save the training/test error.
    ```
    
-- Running commend
+- Algorithm configuration
+  - Training epochs: 100
+  - Batch size: 128
+  - Learning rate: 0.1 (divided 5 at the 50% and 75% of the total number of epochs)
+  - Dataset: CIFAR-10
+  - These configuration can be easily modified:
+  ```python
+   from autoaugment import CIFAR10Policy
+   data = ImageFolder(rootdir, transform=transforms.Compose(
+                           [transforms.RandomCrop(32, padding=4, fill=128), # gray fill value is important bc of the color operations
+                            transforms.RandomHorizontalFlip(), CIFAR10Policy(), 
+             transforms.ToTensor(), 
+                            Cutout(n_holes=1, length=16), # (https://github.com/uoguelph-mlrg/Cutout/blob/master/util/cutout.py)
+                            transforms.Normalize(...)]))
+   loader = DataLoader(data, ...)
    ```
+  
+  
+- Running commend
+   ```python
     python main.py gpu_id method_name noise_rate log_dir
    ```
    This commend includes:
@@ -42,10 +60,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    *iii)* neural network training.
 
 ## 5. Tutorial (Simple Experiment)
-- Configuration
-  - Algorithms: {*Default*, *Co-teaching*}
-  - Noise rate \tau in {0.0, 0.1, 0.2, 0.3, 0.4}
-  - Dataset: CIFAR-10
+
   
   
 
