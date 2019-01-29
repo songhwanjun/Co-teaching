@@ -41,11 +41,12 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    *ii)* noise injection, 
    *iii)* neural network training.
 
-
+## 5. Tutorial (Simple Experiment)
 - Configuration
   - Algorithms: {*Default*, *Co-teaching*}
   - Noise rate \tau in {0.0, 0.1, 0.2, 0.3, 0.4}
   - Dataset: CIFAR-10
+  
   
 
  
