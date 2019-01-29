@@ -34,9 +34,9 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    
 - Algorithm configuration
    ```
-   Training epochs: 100
+   Training epochs: 200
    Batch size: 128
-   Learning rate: 0.1 (divided 5 at the 50% and 75% of the total number of epochs)
+   Learning rate: 0.1 (divided 5 at the approximately 50% and approximately 75% of the total number of epochs)
    Dataset: CIFAR-10
    ```
    These configurations can be easily modified at main.py:
@@ -45,7 +45,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    optimizer = 'momentum'
    
    // total number of training epcohs
-   total_epochs = 100
+   total_epochs = 200
    
    // batch size
    batch_size = 128
@@ -53,7 +53,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    // learning rates used for training, and the time to use each learning rate.
    // e.g., lr=0.1 is used before 20,000 iterations, lr=0.02 is used before 30,000 iterations, lr=0.04 is used after 30,000 iterations
    lr_values = [0.1, 0.02, 0.004]
-   lr_boundaries = [20000, 30000]
+   lr_boundaries = [40000, 60000]
    
    // training algorithms
    if method_name == "Default":
