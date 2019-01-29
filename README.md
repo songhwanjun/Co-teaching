@@ -73,7 +73,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 
 ## 5. Tutorial (Simple Experiment)
 - we used *tau* in {0.0, 0.1, 0.2, 0.3, 0.4} //from *light* noise to *heavy* noise
-- running scripts
+- Running script
    ```python
    #!/bin/sh
    for i in 0.0 0.1 0.2 0.3 0.4
@@ -82,7 +82,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
      echo "main.py 0 Co-teaching $i log/Co-teaching/$i"
    done
    ```
-  
+- Training result
   
 
  
