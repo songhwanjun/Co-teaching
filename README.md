@@ -33,11 +33,15 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    ```
    
 - Algorithm configuration
-  >Training epochs: 100
-  >Batch size: 128
-  >Learning rate: 0.1 (divided 5 at the 50% and 75% of the total number of epochs)
-  >Dataset: CIFAR-10
-  >>These configuration can be easily modified:
+  > Training epochs: 100
+  
+  > Batch size: 128
+  
+  > Learning rate: 0.1 (divided 5 at the 50% and 75% of the total number of epochs)
+  
+  > Dataset: CIFAR-10
+  
+  > These configuration can be easily modified:
   ```python
    from autoaugment import CIFAR10Policy
    data = ImageFolder(rootdir, transform=transforms.Compose(
