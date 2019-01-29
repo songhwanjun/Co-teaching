@@ -59,7 +59,7 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    if method_name == "Default":
        default(gpu_id, input_reader, total_epochs, batch_size, lr_boundaries, lr_values, optimizer, noise_rate, log_dir=log_dir)
    elif method_name == "Coteaching":
-       coteaching(gpu_id, input_reader, total_epochs, batch_size, lr_boundaries, lr_values, optimizer, noise_rate,log_dir=log_dir)
+       coteaching(gpu_id, input_reader, total_epochs, batch_size, lr_boundaries, lr_values, optimizer, noise_rate, log_dir=log_dir)
    ```
    
 - Running commend
