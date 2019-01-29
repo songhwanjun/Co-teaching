@@ -83,7 +83,9 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    main.py 0 Co-teaching 0.4 tutorial_1/Co-teaching
    ```
 - Running result
-
+<p align="center">
+<img src="figures/tutorial_1.png " width="650"> 
+</p>
 
 
 ## 6. Tutorial 2: Comparison of the best test error with varying noise rates.
