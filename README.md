@@ -39,16 +39,27 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
    Learning rate: 0.1 (divided 5 at the 50% and 75% of the total number of epochs)
    Dataset: CIFAR-10
    ```
-   These configuration can be easily modified:
+   These configurationS can be easily modified at main.py:
    ```python
-   from autoaugment import CIFAR10Policy
-   data = ImageFolder(rootdir, transform=transforms.Compose(
-                           [transforms.RandomCrop(32, padding=4, fill=128), # gray fill value is important bc of the color operations
-                            transforms.RandomHorizontalFlip(), CIFAR10Policy(), 
-             transforms.ToTensor(), 
-                            Cutout(n_holes=1, length=16), # (https://github.com/uoguelph-mlrg/Cutout/blob/master/util/cutout.py)
-                            transforms.Normalize(...)]))
-   loader = DataLoader(data, ...)
+   // gradient optimizer type
+   optimizer = 'momentum'
+   
+   // total number of training epcohs
+   total_epochs = 100
+   
+   // batch size
+   batch_size = 128
+   
+   // learning rates used for training, and the time to use each learning rate.
+   // e.g., lr=0.1 is used before 20,000 iterations, lr=0.02 is used before 30,000 iterations, lr=0.04 is used after 30,000 iterations
+   lr_values = [0.1, 0.02, 0.004]
+   lr_boundaries = [20000, 30000]
+   
+   // training algorithms
+   if method_name == "Default":
+       default(gpu_id, input_reader, total_epochs, batch_size, lr_boundaries, lr_values, optimizer, noise_rate, log_dir=log_dir)
+   elif method_name == "Coteaching":
+       coteaching(gpu_id, input_reader, total_epochs, batch_size, lr_boundaries, lr_values, optimizer, noise_rate,log_dir=log_dir)
    ```
   
   
