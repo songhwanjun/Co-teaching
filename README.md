@@ -23,4 +23,19 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 - Tensorflow-gpu 1.8.0 (pip install tensorflow-gpu==1.8.0)
 - Tensorpack (pip install tensorpack)
 
-## 4. Example
+## 4. How to Run
+- Algorithm parameters
+   ```
+    -gpu_id: gpu number which you want to use.
+    -method_name: method in {*Default*, *Co-teaching}.
+    -noise_rate: the rate which you want to corrupt.
+    -log_dir: log directory to save the training/test error.
+   ```
+   
+- Configuration
+  - Algorithms: {*Default*, *Co-teaching*}
+  - Noise rate \tau in {0.0, 0.1, 0.2, 0.3, 0.4}
+  - Dataset: CIFAR-10
+  
+
+ 
