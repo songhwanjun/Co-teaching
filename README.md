@@ -27,11 +27,18 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 - Algorithm parameters
    ```
     -gpu_id: gpu number which you want to use.
-    -method_name: method in {*Default*, *Co-teaching}.
+    -method_name: method in {Default, Co-teaching}.
     -noise_rate: the rate which you want to corrupt.
     -log_dir: log directory to save the training/test error.
    ```
    
+- Running commend
+   ```
+    python main.py gpu_id method_name noise_rate log_dir
+   ```
+   This commend includes *i)* automatical download CIFAR-10 dataset, *ii)* noise injection, and *iii)* neural network training.
+
+
 - Configuration
   - Algorithms: {*Default*, *Co-teaching*}
   - Noise rate \tau in {0.0, 0.1, 0.2, 0.3, 0.4}
