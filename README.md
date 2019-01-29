@@ -10,7 +10,7 @@ neural networks with extremely noisy labels," *Advances in Neural Information Pr
 ## 1. Summary
 For robust training on noisy labels, *Co-teaching* uses two neural networks. Each network selects its small-loss samples as clean samples, and feeds such clean samples to its peer network for futher training. Figure
 
-![Overview of Co-teaching](figures/overview.png)
+![Overview of Co-teaching](figures/overview.png = 100x80)
 
 ## 2. Architecture
 
