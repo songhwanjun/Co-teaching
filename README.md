@@ -75,7 +75,12 @@ For robust training on noisy labels, *Co-teaching* uses two neural networks. Eac
 - we used *tau* in {0.0, 0.1, 0.2, 0.3, 0.4} //from *light* noise to *heavy* noise
 - running scripts
    ```python
-    python main.py gpu_id method_name noise_rate log_dir
+   #!/bin/sh
+   for i in 0.0 0.1 0.2 0.3 0.4
+   do
+     echo "main.py 0 Default $i log/Defulat/$i"
+     echo "main.py 0 Co-teaching $i log/Co-teaching/$i"
+   done
    ```
   
   
