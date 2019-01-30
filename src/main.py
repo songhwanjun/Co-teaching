@@ -15,7 +15,7 @@ def main():
     print("You can easily change the value in main.py")
 
     if len(sys.argv) != 5:
-        print("Run Cmd: python main.py  gpu_id  model_name   noise_rate  log_dir")
+        print("Run Cmd: python main.py  gpu_id  method_name   noise_rate  log_dir")
         print("\nParamters -----------------------------------------------------------")
         print("gpu_id: gpu number which you want to use")
         print("method: {Default, Coteaching}")
